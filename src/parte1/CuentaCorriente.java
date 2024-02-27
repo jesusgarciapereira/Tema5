@@ -62,21 +62,16 @@ public class CuentaCorriente {
 	public boolean sacarDinero(double cantASacar) {
 
 		// Variable que devolverá la función
-		boolean sacarDinero;
+		boolean sacarDinero = false;
 
-		// Si el saldo de la cuenta corriente es menor o igual que 0, o es menor que el
+		// Si el saldo de la cuenta corriente es mayor que 0 y es mayor o igual que el
 		// valor del parámetro
-		if (saldo <= 0 || saldo < cantASacar)
-			// Se asignará nuestra variable como false
-			sacarDinero = false;
-		// En caso contrario
-		else {
+		if (saldo > 0 && saldo >= cantASacar) {
 			// Se asignará nuestra variable como true
 			sacarDinero = true;
 			// Y se le resta al saldo la cantidad a sacar
 			saldo -= cantASacar;
 		}
-
 		// Devuelve el valor de nuestro boolean
 		return sacarDinero;
 
