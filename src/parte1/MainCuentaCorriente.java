@@ -4,9 +4,9 @@ import java.util.Locale;
 import java.util.Scanner;
 
 /**
- * Clase Main para probar las clases de los ejercicios del Tema 5 parte1
+ * Clase Main para probar la clase del Ejercicio01 del Tema 5 parte1
  */
-public class Main {
+public class MainCuentaCorriente {
 
 	/**
 	 * Metodo main
@@ -15,7 +15,6 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 
-		// CLASE CUENTA CORRIENTE
 		// DNI que le pediremos al usuario
 		String dni = "";
 		// Nombre que le pediremos al usuario
@@ -104,6 +103,8 @@ public class Main {
 		
 		// Cerramos el Scanner
 		sc.close();
+
+
 
 	}
 
