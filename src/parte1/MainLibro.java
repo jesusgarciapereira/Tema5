@@ -1,6 +1,5 @@
 package parte1;
 
-
 /**
  * Clase Main para probar la clase del Ejercicio02 del Tema 5 parte1
  */
@@ -34,8 +33,7 @@ public class MainLibro {
 		System.out.println("Ejemplares prestados: " + l1.getEjemplaresPrestados());
 
 		// Llamamos a la función devolucion() y le asignamos el valor devuelto al
-		// boolean
-		// sePuedeDevolver
+		// boolean sePuedeDevolver
 		sePuedeDevolver = l1.devolucion();
 		// Aplicamos un operador ternario para mostrar un mensaje u otro según el valor
 		// de nuestro boolean
