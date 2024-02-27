@@ -8,18 +8,18 @@ public class CuentaCorriente {
 	/**
 	 * DNI del titular de la cuenta
 	 */
-	private String dni;
+	private String dni = "";
 	/**
 	 * Nombre del titular de la cuenta
 	 */
-	private String nombre;
+	private String nombre = "";
 	/**
-	 * Saldo inicial
+	 * Saldo de la cuenta
 	 */
 	private double saldo;
 
 	/**
-	 * Constructor con Con el DNI del titular de la cuenta y un saldo inicial
+	 * Constructor con el DNI del titular de la cuenta y un saldo inicial
 	 * 
 	 * @param dni
 	 * @param saldo
@@ -53,19 +53,20 @@ public class CuentaCorriente {
 	}
 
 	/**
-	 * Funcion sacarDinero: Indica si se puede llevar a cabo la operacion o no y, si es
-	 * posible, resta al saldo la cantidad a sacar
+	 * Funcion sacarDinero: Indica si se puede llevar a cabo la operacion o no y, si
+	 * es posible, resta al saldo la cantidad a sacar
 	 * 
 	 * @param cantASacar Cantidad que se le restara al saldo
 	 * @return True o false segun si es posible llevar a cabo la operacion
 	 */
-	public boolean sacarDinero(int cantASacar) {
-		
+	public boolean sacarDinero(double cantASacar) {
+
 		// Variable que devolverá la función
 		boolean sacarDinero;
-		
-		// Si el saldo de la cuenta corriente es menor o igual que 0
-		if (saldo <= 0)
+
+		// Si el saldo de la cuenta corriente es menor o igual que 0, o es menor que el
+		// valor del parámetro
+		if (saldo <= 0 || saldo < cantASacar)
 			// Se asignará nuestra variable como false
 			sacarDinero = false;
 		// En caso contrario
@@ -75,7 +76,7 @@ public class CuentaCorriente {
 			// Y se le resta al saldo la cantidad a sacar
 			saldo -= cantASacar;
 		}
-		
+
 		// Devuelve el valor de nuestro boolean
 		return sacarDinero;
 
@@ -83,18 +84,19 @@ public class CuentaCorriente {
 
 	/**
 	 * Funcion ingresarDinero: Incrementa el saldo de la cuenta segun la cantidad
-	 * del parametro
+	 * introducida como parametro
 	 * 
 	 * @param cantAIngresar Cantidad de dinero que se ingresara en la cuenta
 	 */
-	public void ingresarDinero(int cantAIngresar) {
+	public void ingresarDinero(double cantAIngresar) {
 		// Al saldo le incrementamos la cantidad a ingresar del parámetro
 		saldo += cantAIngresar;
-	
+
 	}
-	
+
 	/**
-	 * Funcion muestraInformacion: Muestra la informacion detallada de la cuenta corriente 
+	 * Funcion muestraInformacion: Muestra la informacion detallada de la cuenta
+	 * corriente
 	 */
 	public void muestraInformacion() {
 		// Mensaje con el nombre del titular de la cuenta
@@ -103,6 +105,8 @@ public class CuentaCorriente {
 		System.out.println("DNI del titular " + dni);
 		// Mensaje con el saldo actual de la cuenta
 		System.out.println("Saldo actual: " + saldo + "€");
+		// Salto de línea
+		System.out.println();
 	}
 
 }
