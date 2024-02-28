@@ -8,7 +8,7 @@ public class Articulo {
 	/**
 	 * Nombre del articulo
 	 */
-	private String nombre = "";
+	private String nombre;
 	/**
 	 * Precio del articulo (sin IVA)
 	 */
@@ -31,7 +31,7 @@ public class Articulo {
 	 */
 	public Articulo(String nombre, double precioSinIVA, int cuantosQuedan) {
 		// El parámetro nombre, no admitirá null ni caracter vacío
-		if (nombre != null && nombre.equals(""))
+		if (nombre != null && !nombre.equals(""))
 			this.nombre = nombre;
 		// Si se intenta asignar, mostrará este mensaje
 		else

@@ -11,7 +11,7 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Articulo a1 = new Articulo (null, 0, -7);
+		Articulo a1 = new Articulo ("", 0, -7);
 		
 
 	}

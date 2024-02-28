@@ -39,10 +39,10 @@ public class Libro {
 	 */
 	public Libro(String titulo, String autor, int ejemplaresDisponibles, int ejemplaresPrestados) {
 		// El parámetro titulo, no admitirá null ni caracter vacío
-		if (titulo != null && titulo.equals(""))
+		if (titulo != null && !titulo.equals(""))
 			this.titulo = titulo;
 		// El parámetro autor, no admitirá null ni caracter vacío
-		if (autor != null && autor.equals(""))
+		if (autor != null && !autor.equals(""))
 			this.autor = autor;
 		// El parámetro ejemplares disponibles, debe ser mayor o igual que 0
 		if (ejemplaresDisponibles >= 0)
