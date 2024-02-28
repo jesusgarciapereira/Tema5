@@ -73,8 +73,7 @@ public class Main {
 		}
 
 		// Llamamos a la función sacarDinero() con la cantidad a retirar y le asignamos
-		// el valor devuelto a nuestro
-		// boolean
+		// el valor devuelto a nuestro boolean
 		sePuedeRetirar = c1.sacarDinero(cantARetirar);
 		// Aplicamos un operador ternario para mostrar un mensaje u otro según el valor
 		// de nuestro boolean
@@ -97,14 +96,12 @@ public class Main {
 		c1.ingresarDinero(cantAIngresar);
 		// Salto de línea
 		System.out.println();
-		
+
 		// Mostramos la información de la cuenta con el dinero ingresado
 		c1.muestraInformacion();
-		
+
 		// Cerramos el Scanner
 		sc.close();
-
-
 
 	}
 
