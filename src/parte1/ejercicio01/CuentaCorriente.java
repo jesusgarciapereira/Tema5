@@ -1,4 +1,4 @@
-package parte1;
+package parte1.ejercicio01;
 
 /**
  * Clase correspondiente al Ejercicio 1: Cuenta corriente

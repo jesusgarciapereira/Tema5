@@ -1,4 +1,4 @@
-package parte1;
+package parte1.ejercicio01;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * Clase Main para probar la clase del Ejercicio01 del Tema 5 parte1
  */
-public class MainCuentaCorriente {
+public class Main {
 
 	/**
 	 * Metodo main

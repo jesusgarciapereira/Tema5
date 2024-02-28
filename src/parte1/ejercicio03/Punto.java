@@ -1,4 +1,4 @@
-package parte1;
+package parte1.ejercicio03;
 
 /**
  * Clase correspondiente al Ejercicio 3: Punto

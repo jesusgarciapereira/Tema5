@@ -1,9 +1,9 @@
-package parte1;
+package parte1.ejercicio03;
 
 /**
  * Clase Main para probar la clase del Ejercicio03 del Tema 5 parte1
  */
-public class MainPunto {
+public class Main {
 
 	/**
 	 * Metodo main

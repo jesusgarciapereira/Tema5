@@ -1,4 +1,4 @@
-package parte1;
+package parte1.ejercicio02;
 
 /**
  * Clase correspondiente al Ejercicio 2: Libro
