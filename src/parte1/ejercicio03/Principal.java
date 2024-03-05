@@ -3,7 +3,7 @@ package parte1.ejercicio03;
 /**
  * Clase correspondiente al Ejercicio 3: Punto
  */
-public class Punto {
+public class Principal {
 
 	/**
 	 * Coordenada X
@@ -21,7 +21,7 @@ public class Punto {
 	 * @param cordX
 	 * @param cordY
 	 */
-	public Punto(int cordX, int cordY) {
+	public Principal(int cordX, int cordY) {
 		this.cordX = cordX;
 		this.cordY = cordY;
 	}
@@ -67,7 +67,7 @@ public class Punto {
 	 * @param p Objeto de clase Punto
 	 * @return La distancia entre el objeto al que se aplica la funcion y el objeto del parametro
 	 */
-	public double distancia(Punto p) {
+	public double distancia(Principal p) {
 		// Numero que indica la distancia entre los dos puntos
 		double distancia;
 

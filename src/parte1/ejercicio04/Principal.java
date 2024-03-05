@@ -3,7 +3,7 @@ package parte1.ejercicio04;
 /**
  * Clase Main para probar la clase del Ejercicio04 del Tema 5 parte1
  */
-public class Main {
+public class Principal {
 
 	/**
 	 * Metodo main

@@ -16,7 +16,7 @@ public class Main {
 		double distancia;
 
 		// Creo un objeto de clase Punto
-		Punto p1 = new Punto(2, 3);
+		Principal p1 = new Principal(2, 3);
 		// Llamo a la función imprime() para mostrarlo
 		p1.imprime();
 
@@ -31,7 +31,7 @@ public class Main {
 		p1.imprime();
 		
 		// Creo un nuevo punto
-		Punto p2 = new Punto(4, 1);
+		Principal p2 = new Principal(4, 1);
 		// Llamo a la función distancia() con los dos puntos y se lo asigno a la variable distancia
 		distancia= p1.distancia(p2);
 		// Muestro la distancia
