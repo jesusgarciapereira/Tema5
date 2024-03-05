@@ -83,13 +83,13 @@ public class Libro {
 		boolean sePuedePrestar = false;
 
 		// Si el número de ejemplares disponibles es mayor que 0
-		if (ejemplaresDisponibles > 0) {
+		if (this.ejemplaresDisponibles > 0) {
 			// Se asignará nuestra variable como true
 			sePuedePrestar = true;
 			// Incrementamos la cantidad de ejemplares prestados
-			ejemplaresPrestados++;
+			this.ejemplaresPrestados++;
 			// Decrementamos la cantidad de ejemplares disponibles
-			ejemplaresDisponibles--;
+			this.ejemplaresDisponibles--;
 
 		}
 		// Devuelve el valor de nuestro boolean
@@ -110,13 +110,13 @@ public class Libro {
 		boolean sePuedeDevolver = false;
 
 		// Si el número de ejemplares prestados es mayor que 0
-		if (ejemplaresPrestados > 0) {
+		if (this.ejemplaresPrestados > 0) {
 			// Se asignará nuestra variable como true
 			sePuedeDevolver = true;
 			// Decrementamos la cantidad de ejemplares prestados
-			ejemplaresPrestados--;
+			this.ejemplaresPrestados--;
 			// Incrementamos la cantidad de ejemplares disponibles
-			ejemplaresDisponibles++;
+			this.ejemplaresDisponibles++;
 
 		}
 		// Devuelve el valor de nuestro boolean

@@ -31,7 +31,7 @@ public class Punto {
 	 */
 	public void imprime() {
 		// Muestra las coordenadas tal que así
-		System.out.println("(" + cordX + ", " + cordY + ")");
+		System.out.println("(" + this.cordX + ", " + this.cordY + ")");
 
 	}
 

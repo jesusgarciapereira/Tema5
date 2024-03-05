@@ -55,11 +55,11 @@ public class Articulo {
 	 */
 	public void muestraInformacion() {
 		// Mensaje con el nombre del artículo
-		System.out.println("Nombre del artículo: " + nombre);
+		System.out.println("Nombre del artículo: " + this.nombre);
 		// Mensaje con el precio del artículo (sin IVA)
-		System.out.println("Precio del artículo (sin IVA): " + precioSinIVA + "€");
+		System.out.println("Precio del artículo (sin IVA): " + this.precioSinIVA + "€");
 		// Mensaje con la cantidad de artículos que quedan en el almacén
-		System.out.println("Cuántos quedan en el almacén: " + cuantosQuedan);
+		System.out.println("Cuántos quedan en el almacén: " + this.cuantosQuedan);
 		// Salto de línea
 		System.out.println();
 	}
@@ -73,7 +73,7 @@ public class Articulo {
 		// Precio de venta al público que devolverá la función
 		double precioPVP;
 		// Asignamos a la variable la siguiente fórmula
-		precioPVP = precioSinIVA * (IVA + 100) / 100;
+		precioPVP = this.precioSinIVA * (this.IVA + 100) / 100;
 		// Devolverá dicho valor
 		return precioPVP;
 
@@ -92,7 +92,7 @@ public class Articulo {
 		double precioPVPSinDescuento;
 
 		// Asignamos al precio sin descuento la siguiente fórmula
-		precioPVPSinDescuento = (precioSinIVA * (IVA + 100) / 100);
+		precioPVPSinDescuento = (this.precioSinIVA * (this.IVA + 100) / 100);
 		// Asignamos al precio con descuento la siguiente fórmula
 		precioPVPConDescuento = precioPVPSinDescuento * (100 - descuento) / 100;
 
@@ -114,11 +114,11 @@ public class Articulo {
 		boolean sePuedeVender = false;
 
 		// Si el valor del parámetro es mayor que 0 y menor o igual que la cantidad que queda
-		if (x > 0 && x <= cuantosQuedan) {
+		if (x > 0 && x <= this.cuantosQuedan) {
 			// Se asignará nuestra variable como true
 			sePuedeVender = true;
 			// Y se le resta a cuantos quedan la cantidad que se venderá
-			cuantosQuedan -= x;
+			this.cuantosQuedan -= x;
 		}
 		// Devuelve el valor de nuestro boolean
 		return sePuedeVender;
@@ -129,7 +129,7 @@ public class Articulo {
 	 * @param x Cantidad que incrementaremos al atributo
 	 */
 	public void almacenar (int x) {
-		cuantosQuedan += x;
+		this.cuantosQuedan += x;
 		
 	}
 }
