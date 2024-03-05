@@ -59,19 +59,35 @@ public class CuentaCorriente {
 //			this.nombre = nombre;
 	}
 
+	/**
+	 * Getter del dni
+	 * @return Valor del atributo dni
+	 */
 	public String getDni() {
 		return dni;
 	}
 
+	/**
+	 * Getter del nombre
+	 * @return Valor del atributo nombre
+	 */
 	public String getNombre() {
 		return nombre;
 	}
 
+	/**
+	 * Setter del nombre
+	 * @param nombre Atributo que cambiaremos
+	 */
 	public void setNombre(String nombre) {
 		if (nombre != null && !nombre.equals(""))
 			this.nombre = nombre;
 	}
 
+	/**
+	 * Getter del saldo
+	 * @return Valor del atributo saldo
+	 */
 	public double getSaldo() {
 		return saldo;
 	}
