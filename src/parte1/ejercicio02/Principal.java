@@ -18,7 +18,7 @@ public class Principal {
 		boolean sePuedeDevolver;
 
 		// Creamos un objeto de tipo Libro
-		Libro l1 = new Libro("El Señor de los Anillos", "J.R.R.Tolkien", 5, 0);
+		Libro l1 = new Libro("El Señor de los Anillos", "J.R.R.Tolkien", 5, 5);
 
 		// Llamamos a la función prestamo() y le asignamos el valor devuelto al boolean
 		// sePuedePrestar
