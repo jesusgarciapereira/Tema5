@@ -46,8 +46,10 @@ public class Main {
 				System.out.println("Introduzca la nota media del alumno");
 				// Y lo asignamos
 				notaMedia = sc.nextDouble();
-				
-				// Si se ha llevado a cabo
+				// Y limpiamos el buffer
+				sc.nextLine();
+
+				// Si se ha llevado a cabo el añadido del alumno
 				if (ArrayAlumno.anniadirAlumno(nombre, notaMedia))
 					// Se muestra este mensaje
 					System.out.println("Alumno agregado correctamente");
@@ -55,17 +57,64 @@ public class Main {
 				else
 					// Se muestra este otro mensaje
 					System.out.println("Tabla llena, no se ha podido agregar al alumno");
-				
+
 				// Salto de línea
 				System.out.println();
 				break;
 
-			default:
+			// Si la opcion es 3
+			case 3:
+				// Le pedimos al usuario el nombre del alumno
+				System.out.println("Introduzca el nombre del alumno");
+				// Y lo asignamos
+				nombre = sc.nextLine();
+				// Le pedimos al usuario la nota media del alumno
+				System.out.println("Introduzca la nueva nota del alumno");
+				// Y lo asignamos
+				notaMedia = sc.nextDouble();
+				// Y limpiamos el buffer
+				sc.nextLine();
+
+				// Si se ha llevado a cabo la modificación del alumno
+				if (ArrayAlumno.modificarAlumno(nombre, notaMedia))
+					// Se muestra este mensaje
+					System.out.println("Alumno modificado con éxito");
+				// En caso contrario
+				else
+					// Se muestra este otro mensaje
+					System.out.println("El alumno introducido no se encuentra en la tabla");
+
+				// Salto de línea
+				System.out.println();
 				break;
+
+			// Si la opcion es 4
+			case 4:
+				// Le pedimos al usuario el nombre del alumno
+				System.out.println("Introduzca el nombre del alumno");
+				// Y lo asignamos
+				nombre = sc.nextLine();
+				
+				// Si se ha llevado a cabo la eliminación del alumno
+				if (ArrayAlumno.borrarAlumno(nombre))
+					// Se muestra este mensaje
+					System.out.println("Alumno borrado con éxito");
+				// En caso contrario
+				else
+					// Se muestra este otro mensaje
+					System.out.println("El alumno introducido no se encuentra en la tabla");
+
+				// Salto de línea
+				System.out.println();
+				break;
+
 			}
 
 			// Mientras la opción sea distinto de 5, repetimos las intrucciones del do
 		} while (opcion != 5);
+
+		// Mostramos este mensaje de finalización
+		System.out.println("Saliendo del gestor de alumnos");
 
 		// Cerramos el Scanner
 		sc.close();
