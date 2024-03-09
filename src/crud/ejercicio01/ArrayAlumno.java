@@ -1,5 +1,9 @@
 package crud.ejercicio01;
 
+/**
+ * Clase en la que definiremos la tabla con los alumnos y las funciones para
+ * gestionar
+ */
 public class ArrayAlumno {
 
 	/**
