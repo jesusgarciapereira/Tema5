@@ -3,7 +3,7 @@ package crud.ejercicio01;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Main {
+public class GestorAlumno {
 
 	public static void main(String[] args) {
 
