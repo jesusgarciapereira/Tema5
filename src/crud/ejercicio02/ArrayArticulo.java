@@ -37,32 +37,66 @@ public class ArrayArticulo {
 	 */
 	public static boolean anniadirArticulo(String codigo, String descripcion, double precioDeCompra,
 			double precioDeVenta, int stock) {
-		
+		// Contador para las posiciones de la tabla
+		int i = 0;
 		// Boolean que indica si se hañadido un nuevo articulo, inicializado como false
 		boolean anniadido = false;
 
 		// Creamos un nuevo artículo con los datos introducidos en el parámetro
 		Articulo articulo = new Articulo(codigo, descripcion, precioDeCompra, precioDeVenta, stock);
+		// Boolean que determina si el articulo creado se encuentra en la tabla
+		boolean encontrado = encontrarArticulo(articulo);
 
-		// Contador para las posiciones de la tabla
-		int i = 0;
+		// Si no lo ha encontrado
+		if (!encontrado) {
 
-		// Mientras el valor del contador sea menor a la longitud de la tabla almacen y
-		// dicho elemento sea null
-		while (i < almacen.length && almacen[i] != null)
-			// Incrementamos el contador
-			i++;
+			// Mientras el valor del contador sea menor a la longitud de la tabla almacen y
+			// dicho elemento sea null
+			while (i < almacen.length && almacen[i] != null)
+				// Incrementamos el contador
+				i++;
 
-		// Si el valor del contador es menor a la longitud de la tabla almacén
-		if (i < almacen.length) {
-			// Asignamos el objeto creado a dicha posición
-			almacen[i] = articulo;
-			// Y asignamos nuestro boolean como true
-			anniadido = true;
+			// Si el valor del contador es menor a la longitud de la tabla almacén
+			if (i < almacen.length) {
+				// Asignamos el objeto creado a dicha posición
+				almacen[i] = articulo;
+				// Y asignamos nuestro boolean como true
+				anniadido = true;
+			}
 		}
 		
 		// Devolverá el valor de nuestro boolean
 		return anniadido;
 
+	}
+
+	/**
+	 * Funcion que indica si un articulo se encuentra en la tabla almacen
+	 * 
+	 * @param art Articulo a buscar
+	 * @return True o false segun si el articulo esta en nuestro array o no
+	 */
+	private static boolean encontrarArticulo(Articulo art) {
+		// Contador para recorrer la tabla
+		int i = 0;
+		// Variable que indica si un objeto ha sido encontrado, inicializada como false
+		boolean encontrado = false;
+
+		// Mientras el objeto en que nos encontramos no sea null y la variable
+		// encontrado sea false
+		while (almacen[i] != null && !encontrado) {
+
+			// Si el contador es menor que la longitud de la tabla y el objeto en que nos
+			// encontramos es igual al objeto del parámetro
+			if (i < almacen.length && almacen[i].equals(art))
+				// Asignamos encontrado como true
+				encontrado = true;
+
+			// Incrementamos el contador
+			i++;
+		}
+
+		// Devuelve el valor de la variable encontrado
+		return encontrado;
 	}
 }

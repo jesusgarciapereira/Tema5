@@ -46,18 +46,26 @@ public class Gestisimal {
 				System.out.println("Introduzca el código del nuevo artículo");
 				// Y lo asignamos
 				codigo = sc.nextLine();
+				
 				// Le pedimos al usuario la descripción del nuevo artículo
 				System.out.println("Introduzca la descripción del nuevo artículo");
 				// Y lo asignamos
 				descripcion = sc.nextLine();
+				
 				// Le pedimos al usuario el precio de compra del nuevo artículo
 				System.out.println("Introduzca el precio de compra del nuevo artículo");
 				// Y lo asignamos
 				precioDeCompra = sc.nextDouble();
+				// Y limpiamos el buffer
+				sc.nextLine();
+				
 				// Le pedimos al usuario el precio de venta del nuevo artículo
 				System.out.println("Introduzca el precio de venta del nuevo artículo");
 				// Y lo asignamos
 				precioDeVenta = sc.nextDouble();
+				// Y limpiamos el buffer
+				sc.nextLine();
+				
 				// Le pedimos al usuario el stock del nuevo artículo
 				System.out.println("Introduzca el stock del nuevo artículo");
 				// Lo asignamos
@@ -72,7 +80,7 @@ public class Gestisimal {
 				// En caso contrario
 				else
 					// Mostramos este otro mensaje
-					System.out.println("No disponemos de más espacio en el almacén");
+					System.out.println("No se ha podido añadir el artículo");
 				
 				// salto de línea
 				System.out.println();

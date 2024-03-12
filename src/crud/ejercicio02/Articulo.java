@@ -176,16 +176,14 @@ public class Articulo {
 
 	/**
 	 * Metodo toString que devuelve una cadena con la informacion del articulo en
-	 * este formato: 
-	 * Codigo: 1 Descripcion: 
-	 * Descripcion del articulo 1 ...
+	 * este formato: Codigo: 1 Descripcion: Descripcion del articulo 1 ...
 	 * 
 	 * @return Devuelve una cadena con la informacion del articulo
 	 */
 	@Override
 	public String toString() {
 		// Texto que mostrará la función
-		String cadena = "";
+		String cadena = "----------------------------------------------";
 
 		// Le concatenamos cada dato a nuestra cadena
 		cadena += "Código: " + this.codigo + "\n";
@@ -196,6 +194,29 @@ public class Articulo {
 
 		// Muestra todos los atributos del objeto de tipo Articulo
 		return cadena;
+	}
+
+	/**
+	 * Metodo equals sobreescrito que compara dos objetos de tipo Articulo y
+	 * devuelve true o false segun si los codigos de ambos son iguales o no
+	 * 
+	 * @return iguales Variable que determina si los dos objetos tienen el mismo codigo
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		// Variable que devolverá la función, inicializada como false
+		boolean iguales = false;
+
+		// Hacemos una copia del parámetro, casteada como tipo Articulo
+		Articulo art2 = (Articulo) obj;
+
+		// Si ambos objetos tienen el mismo código
+		if (this.codigo.equals(art2.codigo))
+			// Asignamos nuestra variable como true
+			iguales = true;
+
+		// Devolverá el valor de la variable iguales
+		return iguales;
 	}
 
 }
