@@ -188,7 +188,6 @@ public class Articulo {
 		cadena += "Precio de compra: " + this.precioDeCompra + "\n";
 		cadena += "Precio de venta: " + this.precioDeVenta + "\n";
 		cadena += "Stock: " + this.stock + "\n";
-		;
 		
 		// Muestra todos los atributos del objeto de tipo Articulo
 		return cadena;
