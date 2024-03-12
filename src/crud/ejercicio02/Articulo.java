@@ -71,7 +71,7 @@ public class Articulo {
 	/**
 	 * Funcion que devuelve el valor del atributo codigo
 	 * 
-	 * @return Atributo codigo
+	 * @return El codigo del articulo
 	 */
 	public String getCodigo() {
 		return codigo;
@@ -92,7 +92,7 @@ public class Articulo {
 	/**
 	 * Funcion que devuelve el valor del atributo descripcion
 	 * 
-	 * @return Atributo descripcion
+	 * @return La descripcion del articulo
 	 */
 	public String getDescripcion() {
 		return descripcion;
@@ -113,7 +113,7 @@ public class Articulo {
 	/**
 	 * Funcion que devuelve el valor del atributo precioDeCompra
 	 * 
-	 * @return Atributo precioDeCompra
+	 * @return El precio de compra del articulo
 	 */
 	public double getPrecioDeCompra() {
 		return precioDeCompra;
@@ -134,7 +134,7 @@ public class Articulo {
 	/**
 	 * Funcion que devuelve el valor del atributo precioDeVenta
 	 * 
-	 * @return Atributo precioDeVenta
+	 * @return El precio de venta del articulo
 	 */
 	public double getPrecioDeVenta() {
 		return precioDeVenta;
@@ -155,7 +155,7 @@ public class Articulo {
 	/**
 	 * Funcion que devuelve el valor del atributo stock
 	 * 
-	 * @return Atributo stock
+	 * @return El stock del articulo
 	 */
 	public int getStock() {
 		return stock;
