@@ -82,10 +82,13 @@ public class Alumno {
 	}
 	
 
-	@Override
+	
 	/**
 	 * Metodo toString sobreescrito
+	 * 
+	 * @return Devolvera una cadena de texto con el nombre y la nota media del alumno
 	 */
+	@Override
 	public String toString() {
 		// Muestra el nombre y la nota media del objeto Alumno
 		return this.nombre + ": " + this.notaMedia;
