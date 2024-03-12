@@ -174,21 +174,26 @@ public class Articulo {
 			this.stock = stock;
 	}
 
-	@Override
 	/**
-	 * Metodo toString sobreescrito
+	 * Metodo toString que devuelve una cadena con la informacion del articulo en
+	 * este formato: 
+	 * Codigo: 1 Descripcion: 
+	 * Descripcion del articulo 1 ...
+	 * 
+	 * @return Devuelve una cadena con la informacion del articulo
 	 */
+	@Override
 	public String toString() {
 		// Texto que mostrará la función
 		String cadena = "";
-		
+
 		// Le concatenamos cada dato a nuestra cadena
 		cadena += "Código: " + this.codigo + "\n";
 		cadena += "Descripción: " + this.descripcion + "\n";
 		cadena += "Precio de compra: " + this.precioDeCompra + "\n";
 		cadena += "Precio de venta: " + this.precioDeVenta + "\n";
 		cadena += "Stock: " + this.stock + "\n";
-		
+
 		// Muestra todos los atributos del objeto de tipo Articulo
 		return cadena;
 	}
