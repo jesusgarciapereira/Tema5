@@ -82,6 +82,7 @@ public class ArrayArticulo {
 		// Variable que indica si un objeto ha sido encontrado, inicializada como false
 		boolean encontrado = false;
 
+		
 		// Mientras el objeto en que nos encontramos no sea null y la variable
 		// encontrado sea false
 		while (almacen[i] != null && !encontrado) {
