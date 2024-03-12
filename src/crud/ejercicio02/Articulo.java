@@ -77,6 +77,7 @@ public class Articulo {
 		return codigo;
 	}
 
+	// ESTA FUNCION SE PUEDE QUITAR
 	/**
 	 * Funcion que modifica el valor del atributo codigo
 	 * 
@@ -172,18 +173,25 @@ public class Articulo {
 			// Se asigna al atributo stock
 			this.stock = stock;
 	}
-	
+
 	@Override
 	/**
 	 * Metodo toString sobreescrito
 	 */
 	public String toString() {
+		// Texto que mostrará la función
+		String cadena = "";
+		
+		// Le concatenamos cada dato a nuestra cadena
+		cadena += "Código: " + this.codigo + "\n";
+		cadena += "Descripción: " + this.descripcion + "\n";
+		cadena += "Precio de compra: " + this.precioDeCompra + "\n";
+		cadena += "Precio de venta: " + this.precioDeVenta + "\n";
+		cadena += "Stock: " + this.stock + "\n";
+		;
+		
 		// Muestra todos los atributos del objeto de tipo Articulo
-		return "Código: " + this.codigo + "\n"
-				+ "Descripción: " + this.descripcion + "\n"
-				+ "Precio de compra: " + this.precioDeCompra + "\n"
-				+ "Precio de venta: " + this.precioDeVenta + "\n"
-				+ "Stock: " + this.stock + "\n";
+		return cadena;
 	}
 
 }
