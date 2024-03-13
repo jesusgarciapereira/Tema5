@@ -46,46 +46,59 @@ public class Gestisimal {
 				System.out.println("Introduzca el código del nuevo artículo");
 				// Y lo asignamos
 				codigo = sc.nextLine();
-				
+
 				// Le pedimos al usuario la descripción del nuevo artículo
 				System.out.println("Introduzca la descripción del nuevo artículo");
 				// Y lo asignamos
 				descripcion = sc.nextLine();
-				
+
 				// Le pedimos al usuario el precio de compra del nuevo artículo
 				System.out.println("Introduzca el precio de compra del nuevo artículo");
 				// Y lo asignamos
 				precioDeCompra = sc.nextDouble();
 				// Y limpiamos el buffer
 				sc.nextLine();
-				
+
 				// Le pedimos al usuario el precio de venta del nuevo artículo
 				System.out.println("Introduzca el precio de venta del nuevo artículo");
 				// Y lo asignamos
 				precioDeVenta = sc.nextDouble();
 				// Y limpiamos el buffer
 				sc.nextLine();
-				
+
 				// Le pedimos al usuario el stock del nuevo artículo
 				System.out.println("Introduzca el stock del nuevo artículo");
 				// Lo asignamos
 				stock = sc.nextInt();
 				// Y limpiamos el buffer
 				sc.nextLine();
-				
+
 				// Si se ha podido añadidir el artículo
-				if(ArrayArticulo.anniadirArticulo(codigo, descripcion, precioDeCompra, precioDeVenta, stock))
+				if (ArrayArticulo.anniadirArticulo(codigo, descripcion, precioDeCompra, precioDeVenta, stock))
 					// Mostramos este mensaje
 					System.out.println("Artículo añadido correctamente");
 				// En caso contrario
 				else
 					// Mostramos este otro mensaje
 					System.out.println("No se ha podido añadir el artículo");
-				
+
 				// salto de línea
 				System.out.println();
 				break;
 			case 3:
+				// Le pedimos al usuario el código del artículo que se borrará
+				System.out.println("Introduzca el código del artículo que quiera borrar");
+				// Y lo asignamos
+				codigo = sc.nextLine();
+
+				// Si se ha podido borrar el artículo
+				if (ArrayArticulo.borrarArticulo(codigo))
+					// Mostramos este mensaje
+					System.out.println("Artículo borrado correctamente");
+				// En caso contrario
+				else
+					// Mostramos este otro mensaje
+					System.out.println("No se encuentra dicho artículo en el almacén");
 
 				break;
 			case 4:

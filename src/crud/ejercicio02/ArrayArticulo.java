@@ -39,16 +39,18 @@ public class ArrayArticulo {
 			double precioDeVenta, int stock) {
 		// Contador para las posiciones de la tabla
 		int i = 0;
-		// Boolean que indica si se hañadido un nuevo articulo, inicializado como false
+		// Posición en la que se encuentra el artículo que creamos
+		int posicion;
+		// Boolean que indica si se ha ñadido un nuevo articulo, inicializado como false
 		boolean anniadido = false;
 
 		// Creamos un nuevo artículo con los datos introducidos en el parámetro
 		Articulo articulo = new Articulo(codigo, descripcion, precioDeCompra, precioDeVenta, stock);
-		// Boolean que determina si el articulo creado se encuentra en la tabla
-		boolean encontrado = encontrarArticulo(articulo);
+		// Llamamos a la función encontrarArticulo para asignar el valor de la posición
+		posicion = encontrarArticulo(articulo);
 
 		// Si no lo ha encontrado
-		if (!encontrado) {
+		if (posicion == -1) {
 
 			// Mientras el valor del contador sea menor a la longitud de la tabla almacen y
 			// dicho elemento sea null
@@ -64,10 +66,32 @@ public class ArrayArticulo {
 				anniadido = true;
 			}
 		}
-		
+
 		// Devolverá el valor de nuestro boolean
 		return anniadido;
 
+	}
+
+	public static boolean borrarArticulo(String codigo) {
+		// Posición en la que se encuentra el artículo que borraremos
+		int posicion;
+		// Boolean que indica si se ha borrado un articulo, inicializado como false
+		boolean borrado = false;
+
+		// Creamos un nuevo artículo con el código introducido en el parámetro
+		Articulo articulo = new Articulo(codigo);
+		// Llamamos a la función encontrarArticulo para asignar el valor de la posición
+		posicion = encontrarArticulo(articulo);
+
+		// Si lo ha encontrado
+		if (posicion >= 0) {
+			// Asignamos el objeto de dicha posición como null
+			almacen[posicion] = null;
+			// Y asignamos nuestro boolean como true
+			borrado = true;
+		}
+		// Devolverá el valor de nuestro boolean
+		return borrado;
 	}
 
 	/**
@@ -76,28 +100,28 @@ public class ArrayArticulo {
 	 * @param art Articulo a buscar
 	 * @return True o false segun si el articulo esta en nuestro array o no
 	 */
-	private static boolean encontrarArticulo(Articulo art) {
+	private static int encontrarArticulo(Articulo art) {
 		// Contador para recorrer la tabla
 		int i = 0;
-		// Variable que indica si un objeto ha sido encontrado, inicializada como false
-		boolean encontrado = false;
+		// Variable que indica la posición en la que se encuentra el artículo, si no lo
+		// encuentra será -1
+		int posicion = -1;
 
-		
-		// Mientras el objeto en que nos encontramos no sea null y la variable
-		// encontrado sea false
-		while (almacen[i] != null && !encontrado) {
+		// Mientras el objeto en que nos encontramos no sea null y no se haya encontrado
+		// nuestro objeto
+		while (almacen[i] != null && posicion == -1) {
 
 			// Si el contador es menor que la longitud de la tabla y el objeto en que nos
 			// encontramos es igual al objeto del parámetro
 			if (i < almacen.length && almacen[i].equals(art))
-				// Asignamos encontrado como true
-				encontrado = true;
+				// Asignamos a la posición el contador
+				posicion = i;
 
 			// Incrementamos el contador
 			i++;
 		}
 
-		// Devuelve el valor de la variable encontrado
-		return encontrado;
+		// Devuelve la posición en la que se encuentra
+		return posicion;
 	}
 }

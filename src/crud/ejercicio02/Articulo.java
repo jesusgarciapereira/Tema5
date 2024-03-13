@@ -37,6 +37,18 @@ public class Articulo {
 	}
 
 	/**
+	 * Constructor con el codigo como unico parametro
+	 * 
+	 * @param codigo Codigo del articulo
+	 */
+	public Articulo(String codigo) {
+		// Si el parámetro codigo es distinto de null y no es una cadena vacía
+		if (codigo != null && !codigo.equals(""))
+			// Se asigna al atributo codigo
+			this.codigo = codigo;
+	}
+
+	/**
 	 * Constructor con todos los parametros
 	 * 
 	 * @param codigo         Codigo del articulo
@@ -183,7 +195,7 @@ public class Articulo {
 	@Override
 	public String toString() {
 		// Texto que mostrará la función
-		String cadena = "----------------------------------------------";
+		String cadena = "----------------------------------------------\n";
 
 		// Le concatenamos cada dato a nuestra cadena
 		cadena += "Código: " + this.codigo + "\n";
@@ -200,7 +212,8 @@ public class Articulo {
 	 * Metodo equals sobreescrito que compara dos objetos de tipo Articulo y
 	 * devuelve true o false segun si los codigos de ambos son iguales o no
 	 * 
-	 * @return iguales Variable que determina si los dos objetos tienen el mismo codigo
+	 * @return iguales Variable que determina si los dos objetos tienen el mismo
+	 *         codigo
 	 */
 	@Override
 	public boolean equals(Object obj) {
