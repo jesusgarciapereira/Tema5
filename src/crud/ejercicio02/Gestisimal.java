@@ -44,6 +44,7 @@ public class Gestisimal {
 			// Y limpiamos el buffer
 			sc.nextLine();
 
+			// Swich para cada caso de la opción
 			switch (opcion) {
 			case 1:
 				// Mostramos todos los artículos
