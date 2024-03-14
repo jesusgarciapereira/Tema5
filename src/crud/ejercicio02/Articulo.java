@@ -89,19 +89,6 @@ public class Articulo {
 		return codigo;
 	}
 
-	// ESTA FUNCION SE PUEDE QUITAR
-	/**
-	 * Funcion que modifica el valor del atributo codigo
-	 * 
-	 * @param codigo Nuevo codigo que le asignamos
-	 */
-	public void setCodigo(String codigo) {
-		// Si el parámetro codigo es distinto de null y no es una cadena vacía
-		if (codigo != null && !codigo.equals(""))
-			// Se asigna al atributo codigo
-			this.codigo = codigo;
-	}
-
 	/**
 	 * Funcion que devuelve el valor del atributo descripcion
 	 * 
