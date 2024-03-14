@@ -72,6 +72,12 @@ public class ArrayArticulo {
 
 	}
 
+	/**
+	 * Funcion para borrar un articulo presente en la tabla almacen
+	 * 
+	 * @param codigo Codigo del articulo a buscar
+	 * @return True o false segun si se ha llevado a cabo la operacion o no
+	 */
 	public static boolean borrarArticulo(String codigo) {
 		// Posición en la que se encuentra el artículo que borraremos
 		int posicion;
@@ -100,7 +106,7 @@ public class ArrayArticulo {
 	 * @param art Articulo a buscar
 	 * @return True o false segun si el articulo esta en nuestro array o no
 	 */
-	private static int encontrarArticulo(Articulo art) {
+	public static int encontrarArticulo(Articulo art) {
 		// Contador para recorrer la tabla
 		int i = 0;
 		// Variable que indica la posición en la que se encuentra el artículo, si no lo
