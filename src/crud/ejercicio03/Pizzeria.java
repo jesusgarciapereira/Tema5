@@ -21,7 +21,7 @@ public class Pizzeria {
 		int codigo;
 		String tamannio = "";
 		String tipo = "";
-		String estado = "";
+
 
 		do {
 			// Muestra el menu

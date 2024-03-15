@@ -75,17 +75,6 @@ public class Pizza {
 		return codigo;
 	}
 
-	/**
-	 * Metodo que modifica el valor del codigo por el dato introducido en el
-	 * parametro
-	 * 
-	 * @param codigo Nuevo codigo que se le asigna
-	 */
-	public void setCodigo(int codigo) {
-		// El parámetro codigo sólo admitirá números positivos
-		if (codigo > 0)
-			this.codigo = codigo;
-	}
 
 	/**
 	 * Metodo que devuelve el valor del tamannio de la pizza
@@ -96,19 +85,6 @@ public class Pizza {
 		return tamannio;
 	}
 
-	/**
-	 * Metodo que modifica el valor del tamannio por el dato introducido en el
-	 * parametro
-	 * 
-	 * @param codigo Nuevo tamannio que se le asigna
-	 */
-	public void setTamannio(String tamannio) {
-		// El parámetro tamannio no permitirá ni null ni cadena vacía y sólo permitirá
-		// "Mediana" o "Familiar"
-		if (tamannio != null && !tamannio.equals("")
-				&& (tamannio.equalsIgnoreCase("Mediana") || tamannio.equalsIgnoreCase("Familiar")))
-			this.tamannio = tamannio;
-	}
 
 	/**
 	 * Metodo que devuelve el valor del tipo (sabor) de la pizza
@@ -119,18 +95,6 @@ public class Pizza {
 		return tipo;
 	}
 
-	/**
-	 * Metodo que modifica el valor del tipo por el dato introducido en el parametro
-	 * 
-	 * @param codigo Nuevo tipo que se le asigna
-	 */
-	public void setTipo(String tipo) {
-		// El parámetro tipo no permitirá ni null ni cadena vacía y sólo permitirá
-		// "Margarita", "CuatroQuesos" o "Funghi"
-		if (tipo != null && !tipo.equals("") && (tipo.equalsIgnoreCase("Margarita")
-				|| tipo.equalsIgnoreCase("CuatroQuesos") || tipo.equalsIgnoreCase("Funghi")))
-			this.tipo = tipo;
-	}
 
 	/**
 	 * Metodo que devuelve el valor del estado de la pizza
