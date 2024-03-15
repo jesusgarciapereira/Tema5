@@ -75,17 +75,15 @@ public class ArrayArticulo {
 	/**
 	 * Funcion para borrar un articulo presente en la tabla almacen
 	 * 
-	 * @param codigo Codigo del articulo a buscar
+	 * @param articulo Articulo que borrara
 	 * @return True o false segun si se ha llevado a cabo la operacion o no
 	 */
-	public static boolean borrarArticulo(String codigo) {
+	public static boolean borrarArticulo(Articulo articulo) {
 		// Posición en la que se encuentra el artículo que borraremos
 		int posicion;
 		// Boolean que indica si se ha borrado un articulo, inicializado como false
 		boolean borrado = false;
 
-		// Creamos un nuevo artículo con el código introducido en el parámetro
-		Articulo articulo = new Articulo(codigo);
 		// Llamamos a la función encontrarArticulo para asignar el valor de la posición
 		posicion = encontrarArticulo(articulo);
 

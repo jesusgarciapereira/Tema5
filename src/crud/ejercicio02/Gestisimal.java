@@ -100,8 +100,12 @@ public class Gestisimal {
 				// Y lo asignamos
 				codigo = sc.nextLine();
 
+				// Asignamos a nuestro objeto un nuevo artículo con el código introducido por el
+				// usuario
+				articulo = new Articulo(codigo);
+				
 				// Si se ha podido borrar el artículo
-				if (ArrayArticulo.borrarArticulo(codigo))
+				if (ArrayArticulo.borrarArticulo(articulo))
 					// Mostramos este mensaje
 					System.out.println("Artículo borrado correctamente");
 				// En caso contrario
