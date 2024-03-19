@@ -26,12 +26,10 @@ public class ArrayCuentaCorriente {
 	/**
 	 * Funcion para anniadir una nueva cuenta dentro de la tabla cuentas
 	 * 
-	 * @param dni    DNI del titular de la cuenta
-	 * @param nombre Nombre del titular de la cuenta
-	 * @param saldo  Saldo de la cuenta
+	 * @param cuenta  Cuenta corriente que añadiremos
 	 * @return True o false segun si se ha hecho la operacion o no
 	 */
-	public static boolean abrirCuenta(String dni, String nombre, double saldo) {
+	public static boolean abrirCuenta(CuentaCorriente cuenta) {
 		// Contador para las posiciones de la tabla
 		int i = 0;
 		// Posición en la que se encuentra el artículo que creamos
@@ -39,8 +37,6 @@ public class ArrayCuentaCorriente {
 		// Boolean que indica si se ha ñadido un nuevo articulo, inicializado como false
 		boolean creada = false;
 
-		// Creamos una nueva cuenta con los datos introducidos en el parámetro
-		CuentaCorriente cuenta = new CuentaCorriente(dni, nombre, saldo);
 		// Llamamos a la función encontrarCuenta para asignar el valor de la posición
 		posicion = encontrarCuenta(cuenta);
 
@@ -131,7 +127,7 @@ public class ArrayCuentaCorriente {
 	 * @param cantDinero Cantidad de dinero que ingresaremos
 	 * @return True o false segun si se ha llevado a cabo la operacion o no
 	 */
-	public static boolean ingresarDinero(CuentaCorriente cuenta, int cantDinero) {
+	public static boolean ingresarDinero(CuentaCorriente cuenta, double cantDinero) {
 		// Posición en la que se encuentra la cuenta que modificaremos
 		int posicion;
 		// Boolean que indica si han modificado las horas extra
@@ -160,7 +156,7 @@ public class ArrayCuentaCorriente {
 	 * @param cantDinero Cantidad de dinero que retiraremos
 	 * @return True o false segun si se ha llevado a cabo la operacion o no
 	 */
-	public static boolean sacarDinero(CuentaCorriente cuenta, int cantDinero) {
+	public static boolean sacarDinero(CuentaCorriente cuenta, double cantDinero) {
 		// Posición en la que se encuentra la cuenta que modificaremos
 		int posicion;
 		// Boolean que indica si han modificado las horas extra

@@ -19,18 +19,14 @@ public class CuentaCorriente {
 	private double saldo;
 
 	/**
-	 * Constructor con el DNI del titular de la cuenta y un saldo inicial
+	 * Constructor con el DNI del titular de la cuenta como parametro
 	 * 
 	 * @param dni   DNI del titular de la cuenta
-	 * @param saldo Saldo inicial de la cuenta
 	 */
-	public CuentaCorriente(String dni, double saldo) {
+	public CuentaCorriente(String dni) {
 		// El parámetro dni, no admitirá null ni caracter vacío
 		if (dni != null && !dni.equals(""))
 			this.dni = dni;
-		// El parámetro saldo, debe ser mayor o igual que 0
-		if (saldo >= 0)
-			this.saldo = saldo;
 	}
 
 	/**
@@ -133,7 +129,7 @@ public class CuentaCorriente {
 		CuentaCorriente cuenta2 = (CuentaCorriente) obj;
 
 		// Si ambos objetos tienen el mismo dni
-		if (this.dni == cuenta2.dni)
+		if (this.dni.equals(cuenta2.dni))
 			// Asignamos iguales como true
 			iguales = true;
 
