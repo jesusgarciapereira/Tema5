@@ -1,5 +1,6 @@
 package crud.ejercicio03;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Pizzeria {
@@ -22,15 +23,12 @@ public class Pizzeria {
 		String tamannio = "";
 		String tipo = "";
 
-
 		do {
 			// Muestra el menu
 			muestraMenu();
 
 			// Asignamos la opción elegida por el usuario
-			opcion = sc.nextInt();
-			// Limpiamos el buffer
-			sc.nextLine();
+			opcion = pideOpcion();
 
 			// Swich para cada caso de la opción
 			switch (opcion) {
@@ -132,19 +130,41 @@ public class Pizzeria {
 	 * Funcion que muestra el menu
 	 */
 	public static void muestraMenu() {
-		// Menu que se mostrará
-		String menu = "\n";
 
-		// Concatenamos todos los datos
-		menu += "1. Listado de pizzas\n";
-		menu += "2. Nuevo pedido\n";
-		menu += "3. Pizza servida\n";
-		menu += "4. Salir\n\n";
-		menu += "Seleccione una opción";
+		System.out.println("1. Listado de pizzas");
+		System.out.println("2. Nuevo pedido");
+		System.out.println("3. Pizza servida");
+		System.out.println("4. Salir");
 
-		// Mostramos el menu
-		System.out.println(menu);
+	}
 
+	/**
+	 * Funcion para pedir una opcion al usuario
+	 * 
+	 * @return Opcion elegida por el usuario
+	 */
+	private static int pideOpcion() {
+		// Opcion elegida
+		int opcion = 0;
+		do {
+			try {
+				// Le pedimos al usuario una opción
+				System.out.println("Introduce una opción");
+				// Y la asignamos
+				opcion = sc.nextInt();
+				// Si no es escribe un número entero
+			} catch (InputMismatchException e) {
+				// Se mostrará este mensaje
+				System.out.println("Tipo de dato erróneo");
+			} finally {
+				// Siempre limpiaremos el buffer
+				sc.nextLine();
+			}
+			// Si la opción no está entre 1 y 4 se repetirán las instrucciones del do
+		} while (opcion < 1 || opcion > 4);
+
+		// Devolverá la opción elegida
+		return opcion;
 	}
 
 }

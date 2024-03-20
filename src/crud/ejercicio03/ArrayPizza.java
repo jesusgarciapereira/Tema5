@@ -24,6 +24,33 @@ public class ArrayPizza {
 	}
 
 	/**
+	 * Funcion que devuelve la primera posicion libre que haya en la tabla, si no
+	 * hay devuelve -1
+	 * 
+	 * @return Posicion libre
+	 */
+	public static int posicionLibre() {
+		// Posicion que haya libre, inicializado en -1
+		int posicion = -1;
+		// Contador
+		int i = 0;
+
+		// Mientras el contador sea menor que la longitud de la tabla y no se haya encontrado una posición libre
+		while (i < pizzas.length && posicion == -1) {
+			// Si en la posición en la que nos encontramos no hay nada
+			if (pizzas[i] == null) {
+				// Asigna el contador a la posición
+				posicion = 1;
+			}
+			// Incrementamos el contador
+			i++;
+		}
+
+		// Devuelve la posición en la que haya un hueco libre
+		return posicion;
+	}
+
+	/**
 	 * Funcion que anniade una nueva pizza a nuestra tabla de pizzas
 	 * 
 	 * @param codigo   Codigo unico de la pizza
